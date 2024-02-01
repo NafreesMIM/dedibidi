@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Navbar.css'
-import logo from '../Assets/logo.png'
 import card_icon from '../Assets/cart_icon.png'
 
 const Navbar = () => {
@@ -19,9 +18,8 @@ const Navbar = () => {
         <li >PRIVACE POLICY</li>
       </ul>
       <div className="nav-login-card">
-      <Link to='/login'><button>Login</button></Link>
-      <Link to='/card'><img src={card_icon} alt="" /></Link>
-        <div className="nav-card-count">0</div>
+      <button>Login</button>
+      
       </div>
     </div>
   )
