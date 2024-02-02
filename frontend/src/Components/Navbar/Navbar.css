@@ -27,9 +27,7 @@
 }
 
 .comEdit{
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #ffCC70 100%);
-    -webkit-backround-clip: text;
-    color: transparent;
+    color: rgb(69, 146, 235);
 }
 .nav-menu{
     display: flex;
@@ -44,12 +42,19 @@
     
 }
 
+
 .nav-menu li{
 
     padding: 3px;
 }
 
-
+.dropdown:hover{
+    background-color: #6b18b8;
+    color: #000000;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
 
 .nav-menu li:hover{
     background-color: #6b18b8;
@@ -68,18 +73,6 @@
    cursor: pointer;
 }
 
-.nav-menu li select{
-   background: transparent;
-   border-style: none;
-   font-size: 18px;
-   font-weight: 550;
-   cursor: pointer;
-}
-
-.nav-menu li select:active{
-    background: transparent;
-    border-style: none;    
- }
 
 .nav-menu hr{
     border: none;
