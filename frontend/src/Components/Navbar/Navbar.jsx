@@ -16,9 +16,8 @@ const Navbar = () => {
         <p>DADIBIDI</p>
       </div>
       <ul className="nav-menu">
-<<<<<<< HEAD
       <Dropdown title="SERVICES" items={[' Service 1 ', 'Service 2', 'Service 3','service 4','service 5']} />
-=======
+
         <li > 
           <select>
             <option >SERVICES</option>
@@ -27,7 +26,7 @@ const Navbar = () => {
           </select>
                 
         </li>
->>>>>>> 42ced7e17d72107e110d4489dec78f60a1049308
+           42ced7e17d72107e110d4489dec78f60a1049308
         <li >ABOUT US</li>
         <li >CONTACT US</li>
         <li >PRIVACE POLICY</li>
