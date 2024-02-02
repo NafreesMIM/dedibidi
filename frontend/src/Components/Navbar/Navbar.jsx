@@ -3,6 +3,7 @@ import './Navbar.css'
 import logo from '../Assets/Logo.png'
 import card_icon from '../Assets/cart_icon.png'
 import { Link, NavLink } from 'react-router-dom'
+import Dropdown from './Dropdown'; 
 
 const Navbar = () => {
 
@@ -15,7 +16,7 @@ const Navbar = () => {
         <p>DEDIBIDI</p>
       </div>
       <ul className="nav-menu">
-        <li >SERVICES</li>
+      <Dropdown title="SERVICES" items={[' Service 1 ', 'Service 2', 'Service 3','service 4','service 5']} />
         <li >ABOUT US</li>
         <li >CONTACT US</li>
         <li >PRIVACE POLICY</li>
