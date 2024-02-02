@@ -15,7 +15,14 @@ const Navbar = () => {
         <p>DEDIBIDI</p>
       </div>
       <ul className="nav-menu">
-        <li >SERVICES</li>
+        <li >SERVICES
+          <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>  
+          </select>
+                
+        </li>
         <li >ABOUT US</li>
         <li >CONTACT US</li>
         <li >PRIVACE POLICY</li>
