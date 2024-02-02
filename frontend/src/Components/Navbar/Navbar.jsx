@@ -15,9 +15,9 @@ const Navbar = () => {
         <p>DEDIBIDI</p>
       </div>
       <ul className="nav-menu">
-        <li >SERVICES
+        <li > 
           <select>
-            <option>Option 1</option>
+            <option >SERVICES</option>
             <option>Option 2</option>
             <option>Option 3</option>  
           </select>
@@ -28,9 +28,7 @@ const Navbar = () => {
         <li >PRIVACE POLICY</li>
       </ul>
       <div className="nav-login-card">
-      <button>Login</button>
-      
-      
+        <button>Login</button>   
       </div>
     </div>
   )

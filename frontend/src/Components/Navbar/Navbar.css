@@ -59,6 +59,20 @@
    gap: 3px;
    cursor: pointer;
 }
+
+.nav-menu li select{
+   background: transparent;
+   border-style: none;
+   font-size: 18px;
+   font-weight: 550;
+   cursor: pointer;
+}
+
+.nav-menu li select:active{
+    background: transparent;
+    border-style: none;    
+ }
+
 .nav-menu hr{
     border: none;
     width: 90%;
@@ -69,12 +83,12 @@
 .nav-login-card{
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 35px;
 }
 
 .nav-login-card button{
-    width: 157px;
-    height: 60px;
+    width: 100px;
+    height: 40px;
     outline: none;
     border: 1px solid black;
     border-radius: 75px;
