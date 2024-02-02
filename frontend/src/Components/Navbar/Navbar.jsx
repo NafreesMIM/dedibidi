@@ -26,7 +26,7 @@ const Navbar = () => {
           </select>
                 
         </li>
-           42ced7e17d72107e110d4489dec78f60a1049308
+        
         <li >ABOUT US</li>
         <li >CONTACT US</li>
         <li >PRIVACE POLICY</li>
