@@ -25,6 +25,12 @@
     font-size: 35px;
     font-weight: 600;
 }
+
+.comEdit{
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #ffCC70 100%);
+    -webkit-backround-clip: text;
+    color: transparent;
+}
 .nav-menu{
     display: flex;
     align-items: center;
