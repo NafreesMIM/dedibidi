@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import card_icon from '../Assets/cart_icon.png'
+import './Navbar.css'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -20,10 +22,10 @@ const Navbar = () => {
       <div className="nav-login-card">
       <button>Login</button>
       
+      
       </div>
     </div>
   )
 }
-import './Navbar.css'
-import { Link, NavLink } from 'react-router-dom'
+
 export default Navbar
