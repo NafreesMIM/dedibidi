@@ -88,3 +88,22 @@
     background: transparent;
     color: black;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Adjust as needed */
+    left: 0;
+    list-style: none;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    background-color: white;
+   
+  }
+  
