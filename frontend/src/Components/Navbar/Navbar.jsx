@@ -18,8 +18,8 @@ const Navbar = () => {
         <li > 
           <select>
             <option >SERVICES</option>
-            <option>Option 2</option>
-            <option>Option 3</option>  
+            <option><a href='#'>Option 1</a></option>
+            <option><a href='#'>Option 2</a></option>  
           </select>
                 
         </li>
