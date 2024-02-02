@@ -1,7 +1,7 @@
 .navbar{
     display:  flex;
     justify-content: space-around;
-    padding: 1px;
+    padding: auto;
     box-shadow: 0 1px 3px -2px black;
     background: blueviolet;
 }
@@ -16,12 +16,13 @@
     width: 10%;
     height: 600;
     gap: 5px;
+    border-radius: 24px;
     padding-left: 40px;
 }
 
 .nav-logo p{
     color: 171717;
-    font-size: 36px;
+    font-size: 38px;
     font-weight: 600;
 }
 .nav-menu{
@@ -29,7 +30,7 @@
     align-items: center;
     text-align: center;
     list-style: none;
-    gap: 50px;
+    gap: 60px;
     color: black;
     font-size: 16px;
     font-weight: 500;
@@ -39,7 +40,7 @@
 
 .nav-menu li{
 
-    padding-right: 10px;
+    padding: 3px;
 }
 
 
@@ -57,9 +58,23 @@
     flex-direction: column;
     align-items: center;
    justify-content: center;
-   gap: 3px;
+   gap: 5px;
    cursor: pointer;
 }
+
+.nav-menu li select{
+   background: transparent;
+   border-style: none;
+   font-size: 18px;
+   font-weight: 550;
+   cursor: pointer;
+}
+
+.nav-menu li select:active{
+    background: transparent;
+    border-style: none;    
+ }
+
 .nav-menu hr{
     border: none;
     width: 90%;
@@ -70,18 +85,19 @@
 .nav-login-card{
     display: flex;
     align-items: center;
-    gap: 45px;
+    padding: 50px;
+    gap: 35px;
 }
 
 .nav-login-card button{
-    width: 157px;
-    height: 60px;
+    width: 100px;
+    height: 40px;
     outline: none;
     border: 1px solid black;
     border-radius: 75px;
-    color: #515151;
-    font-size: 20px;
-    font-weight: 500;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
     background: white;
     cursor: pointer;
 }
