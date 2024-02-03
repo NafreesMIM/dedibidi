@@ -13,20 +13,13 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="nav-logo">
       <img src={logo} alt="" />
-        <p>DADIBIDI</p>
+        <p>DADIBIDI<span className='comEdit'>.COM</span></p>
       </div>
       <ul className="nav-menu">
-      <Dropdown title="SERVICES" items={[' Service 1 ', 'Service 2', 'Service 3','service 4','service 5']} />
+        <Dropdown title="SERVICES" items={[' Service 1 ', 'Service 2', 'Service 3','service 4','service 5']} />
 
-        <li > 
-          <select>
-            <option >SERVICES</option>
-            <option><a href='#'>Option 1</a></option>
-            <option><a href='#'>Option 2</a></option>  
-          </select>
-                
-        </li>
-        
+
+       
         <li >ABOUT US</li>
         <li >CONTACT US</li>
         <li >PRIVACE POLICY</li>
@@ -35,6 +28,9 @@ const Navbar = () => {
         <button>Login</button>   
       </div>
     </div>
+
+
+   
   )
 }
 
