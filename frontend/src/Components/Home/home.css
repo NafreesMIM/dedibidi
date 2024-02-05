@@ -1,0 +1,51 @@
+/* home.css */
+
+.slide-container {
+  width: 80%;
+  margin: auto;
+}
+
+.each-slide-effect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.each-slide-effect > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.slide-content {
+  position: absolute;
+  text-align: center;
+  color: #000000;
+  padding: 20px;
+}
+
+.slide-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.slide-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f3ec25;
+  color: #df0202;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Add more styling as needed */
