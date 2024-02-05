@@ -1,17 +1,20 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Navbar/Footer';
+import Home from './Components/Home/home';
 
 function App() {
   return (
-    <div >
+    <div className="App">
       <Navbar/>
-      
-        <p>Our Contants Will Display Here.</p>
-      
+         
+        <p></p>
+              
       <hr/> 
+      <Home/>
       <Footer/>
     </div>
+    
   );
 }
 
