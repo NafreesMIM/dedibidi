@@ -16,10 +16,7 @@ const Navbar = () => {
         <p>DADIBIDI<span className='comEdit'>.COM</span></p>
       </div>
       <ul className="nav-menu">
-        <Dropdown title="SERVICES" items={[' Service 1 ', 'Service 2', 'Service 3','service 4']} />
-
-
-       
+        <Dropdown title="SERVICES" items={[' Service 1 ', 'Service 2', 'Service 3','service 4']} />      
         <li >ABOUT US</li>
         <li >CONTACT US</li>
         <li >PRIVACE POLICY</li>
