@@ -9,9 +9,13 @@ function App() {
       <Navbar/>
          
         <p></p>
-              
+       <Home/>      
+
+
+
+
+      {/* dont use any under this */}
       <hr/> 
-      <Home/>
       <Footer/>
     </div>
     
