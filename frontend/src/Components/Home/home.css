@@ -1,16 +1,25 @@
 /* home.css */
 
 .slide-container {
-  width: 80%;
-  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .each-slide-effect {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px; /* Adjust the height as needed */
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.each-slide-effect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .each-slide-effect > div {
@@ -18,14 +27,17 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .slide-content {
-  position: absolute;
-  text-align: center;
-  color: #000000;
-  padding: 20px;
+  background: rgba(201, 198, 198, 0.7);
+  padding: 150px;
+  border-radius: 10px;
+  max-width: 80%;
 }
 
 .slide-content h2 {
@@ -43,9 +55,18 @@
   font-size: 16px;
   background-color: #f3ec25;
   color: #df0202;
+  border-radius: 18px;
   border: none;
   cursor: pointer;
   outline: none;
 }
 
 /* Add more styling as needed */
+@media (max-width: 768px) {
+  .each-slide-effect > div {
+    background-position: top;
+  }
+}
+
+
+
