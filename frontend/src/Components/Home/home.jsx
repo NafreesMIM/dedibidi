@@ -1,6 +1,7 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import { Link } from 'react-router-dom';
 import './home.css';
 
 const Example = () => {
@@ -9,26 +10,31 @@ const Example = () => {
             title: 'Job Posting and Seeking System',
             description: 'Connect job seekers with employers and vice versa.',
             image: '/job-posting-slide.jpg',
+            link: '/job-posting', 
         },
         {
             title: 'Online Booking System',
             description: 'Book appointments or services online with ease.',
             image: '/online-booking.jpg',
+            link: '/online-booking', 
         },
         {
             title: 'Online Consultation Services',
             description: 'Get expert advice in various fields like IT, Law, etc.',
             image: '/consultation.jpeg',
+            link: '/consultation', 
         },
         {
             title: 'Selling and Buying Items',
             description: 'A platform to buy and sell various items.',
             image: '/selling-buying.jpeg',
+            link: '/selling-buying', 
         },
         {
             title: 'E-Stores for Selling Products',
             description: 'Provide E-stores for individuals to sell their items and products.',
             image: '/e-store-slide.jpg',
+            link: '/e-stores', 
         },
     ];
 
@@ -41,7 +47,9 @@ const Example = () => {
                             <div className="slide-content">
                                 <h2>{slide.title}</h2>
                                 <p>{slide.description}</p>
-                                <button>Click Me</button>
+                                <Link to={slide.link} style={{ textDecoration: 'none' }}>
+                                    <button>Click Me</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
