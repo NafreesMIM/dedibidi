@@ -1,34 +1,46 @@
-import React, { useState } from 'react'
-import './Navbar.css'
-import logo from '../Assets/Logo.png'
-import card_icon from '../Assets/cart_icon.png'
-import { Link, NavLink } from 'react-router-dom'
-import Dropdown from './Dropdown'; 
+import React, { useState } from 'react';
+import './Navbar.css';
+import logo from '../Assets/Logo.png';
+import { Link } from 'react-router-dom';
+import Dropdown from './Dropdown';
 
 const Navbar = () => {
-
-    const[menu,setMenu]=useState("Shop");
+  const [menu, setMenu] = useState("Shop");
 
   return (
     <div className='navbar'>
       <div className="nav-logo">
-      <img src={logo} alt="" />
+        <img src={logo} alt="" />
         <p>DADIBIDI<span className='comEdit'>.COM</span></p>
       </div>
       <ul className="nav-menu">
-        <Dropdown title="SERVICES" items={[' Service 1 ', 'Service 2', 'Service 3','service 4']} />      
-        <li >ABOUT US</li>
-        <li >CONTACT US</li>
-        <li >PRIVACE POLICY</li>
+        <li onClick={() => { setMenu("home") }}>
+          <Link style={{ textDecoration: 'none' }} to='/'>HOME{menu === "home" ? <hr /> : <></>}</Link>
+        </li>
+        <li onClick={() => { setMenu("services") }}>
+          <Dropdown title="SERVICES" items={[
+            { text: 'Service 1', link: '/service1' },
+            { text: 'Service 2', link: '/service2' },
+            { text: 'Service 3', link: '/service3' },
+            { text: 'Service 4', link: '/service4' }
+          ]} />
+          {menu === "services" ? <hr /> : <></>}
+        </li>
+        <li onClick={() => { setMenu("about") }}>
+          <Link style={{ textDecoration: 'none' }} to='/About'>ABOUT US</Link>{menu === "about" ? <hr /> : <></>}
+        </li>
+        <li onClick={() => { setMenu("contact") }}>
+          <Link style={{ textDecoration: 'none' }} to='/Contact'>CONTACT US</Link> {menu === "contact" ? <hr /> : <></>}
+        </li>
+        <li onClick={() => { setMenu("privacy") }}>
+          <Link style={{ textDecoration: 'none' }} to='/privacy'>PRIVACY POLICY</Link> {menu === "privacy" ? <hr /> : <></>}
+        </li>
       </ul>
       <div className="nav-login-card">
-        <button>Login</button>   
+        <button>Login</button>
       </div>
     </div>
-
-
-   
   )
 }
 
-export default Navbar
+export default Navbar;

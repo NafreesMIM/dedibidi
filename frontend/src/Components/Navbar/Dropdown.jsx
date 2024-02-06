@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import './Navbar.css'
-
-
-
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Dropdown = ({ title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +22,7 @@ const Dropdown = ({ title, items }) => {
         <ul className="dropdown-menu">
           {items.map((item, index) => (
             <li key={index}>
-              {item}
+              <Link to={item.link}>{item.text}</Link>
             </li>
           ))}
         </ul>
@@ -34,5 +32,3 @@ const Dropdown = ({ title, items }) => {
 };
 
 export default Dropdown;
-
-

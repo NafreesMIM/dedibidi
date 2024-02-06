@@ -72,7 +72,17 @@
    gap: 5px;
    cursor: pointer;
 }
+.nav-menu li a {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
 
+.dropdown-menu li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+  }
 
 .nav-menu hr{
     border: none;
