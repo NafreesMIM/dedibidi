@@ -4,6 +4,64 @@ import './Footer.css'
 export default function Footer() {
   return (
     <div className='footer'>
+      
+      <div className="top">
+        <div>
+
+            <h1>Dadibidi</h1>
+        
+        </div>
+        <div>
+         <a href="/">
+            <i className="fa-brands fa-facebook-square"></i>
+         </a>
+         <a href="/">
+            <i className="fa-brands fa-instagram-square"></i>
+         </a>
+         <a href="/">
+            <i className="fa-brands fa-behance-square"></i>
+         </a>
+         <a href="/">
+            <i className="fa-brands fa-twitter-square"></i>
+         </a>
+
+        </div>
+    </div>
+
+    <div className="bottom">
+        <div>
+            <h4>Project</h4>
+            <a href="/" >Changelog</a>
+            <a href="/" >Status</a>
+            <a href="/" >Lisence</a>
+            <a href="/" >All Versions</a>
+        </div>
+
+        <div>
+            <h4>Community</h4>
+            <a href="/" >Github</a>
+            <a href="/" >Issues</a>
+            <a href="/" >Project</a>
+            <a href="/" >Twitter</a>
+        </div>
+
+        <div>
+            <h4>Help</h4>
+            <a href="/" >Support</a>
+            <a href="/" >trabulshooting</a>
+            <a href="/" >Contact Us</a>
+           
+        </div>
+
+        <div>
+            <h4>Other</h4>
+            <a href="/" >Terms of services</a>
+            <a href="/" >Privacy policy</a>
+            <a href="/" >Lisence</a>
+           
+        </div>
+      
+    </div>
 
         <div className="copyright">
             <p>2024 &#169; <a>Arya labs (pvt) Ltd.</a> </p>
