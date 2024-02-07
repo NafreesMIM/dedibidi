@@ -7,13 +7,13 @@ import './home.css';
 const Example = () => {
     const slides = [
         {
-            title: 'Job Posting and Seeking System',
+            title: 'Job Posting and Seeking',
             description: 'Connect job seekers with employers and vice versa.',
             image: '/job-posting-slide.jpg',
             link: '/job-posting', 
         },
         {
-            title: 'Online Booking System',
+            title: 'Online Booking',
             description: 'Book appointments or services online with ease.',
             image: '/online-booking.jpg',
             link: '/online-booking', 
@@ -31,7 +31,7 @@ const Example = () => {
             link: '/selling-buying', 
         },
         {
-            title: 'E-Stores for Selling Products',
+            title: 'E-Stores',
             description: 'Provide E-stores for individuals to sell their items and products.',
             image: '/e-store-slide.jpg',
             link: '/e-stores', 
