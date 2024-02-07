@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
       <div className="top">
         <div>
 
-            <h1>Dadibidi</h1>
+           <h1>Dadibidi.Com</h1>
         
         </div>
         <div>
@@ -49,14 +50,14 @@ export default function Footer() {
             <h4>Help</h4>
             <a href="/" >Support</a>
             <a href="/" >trabulshooting</a>
-            <a href="/" >Contact Us</a>
+            <Link to="/Contact">Contact Us</Link>
            
         </div>
 
         <div>
             <h4>Other</h4>
             <a href="/" >Terms of services</a>
-            <a href="/" >Privacy policy</a>
+            <Link to="/privacy">Privacy policy</Link>
             <a href="/" >Lisence</a>
            
         </div>

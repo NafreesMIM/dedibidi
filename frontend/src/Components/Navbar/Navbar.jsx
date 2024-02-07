@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="nav-logo">
         <img src={logo} alt="" />
-        <p>DADIBIDI<span className='comEdit'>.COM</span></p>
+        <p>Dadibidi<span className='comEdit'>.Com</span></p>
       </div>
       <ul className="nav-menu">
         <li onClick={() => { setMenu("home") }}>
