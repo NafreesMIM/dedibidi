@@ -19,10 +19,11 @@ const Navbar = () => {
         </li>
         <li onClick={() => { setMenu("services") }}>
           <Dropdown title="SERVICES" items={[
-            { text: 'Service 1', link: '/service1' },
-            { text: 'Service 2', link: '/service2' },
-            { text: 'Service 3', link: '/service3' },
-            { text: 'Service 4', link: '/service4' }
+            { text: ' Job posting and seeking', link: '/service1' },
+            { text: 'Online booking', link: '/service2' },
+            { text: 'Online consultation', link: '/service3' },
+            { text: 'Selling and buying', link: '/service4' },
+            { text: 'E stores', link: '/service5' }
           ]} />
           {menu === "services" ? <hr /> : <></>}
         </li>
