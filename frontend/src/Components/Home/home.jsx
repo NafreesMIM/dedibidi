@@ -49,7 +49,7 @@ const Example = () => {
                                 <h2>{slide.title}</h2>
                                 <p>{slide.description}</p>
                                 <Link to={slide.link} style={{ textDecoration: 'none' }}>
-                                    <button>Click Me</button>
+                                    <button>Explore</button>
                                 </Link>
                             </div>
                         </div>
