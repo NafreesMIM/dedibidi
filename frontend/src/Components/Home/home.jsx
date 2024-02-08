@@ -4,6 +4,7 @@ import 'react-slideshow-image/dist/styles.css';
 import { Link } from 'react-router-dom';
 import './home.css';
 
+
 const Example = () => {
     const slides = [
         {
@@ -63,3 +64,4 @@ const Example = () => {
 };
 
 export default Example;
+
