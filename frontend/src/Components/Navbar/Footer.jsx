@@ -39,11 +39,11 @@ export default function Footer() {
         </div>
 
         <div>
-            <h4>Community</h4>
-            <a href="/" >Github</a>
-            <a href="/" >Issues</a>
+            <h4>Dadibidi</h4>
+            <a href="/" >Careers</a>
+            <a href="/" >Partnership</a>
             <a href="/" >Project</a>
-            <a href="/" >Twitter</a>
+            <a href="/" >Mobile App</a>
         </div>
 
         <div>
