@@ -39,6 +39,7 @@ const Example = () => {
     ];
 
     return (
+        <div>
         <div className="slide-container">
             <Slide>
                 {slides.map((slide, index) => (
@@ -55,6 +56,8 @@ const Example = () => {
                     </div>
                 ))}
             </Slide>
+            </div>
+            
         </div>
     );
 };
