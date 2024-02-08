@@ -38,7 +38,10 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="nav-login-card">
-        <button>Login</button>
+      
+        <Link to='/login' style={{ textDecoration: 'none' }}>
+          <button>Login</button>
+        </Link>
       </div>
     </div>
   )
