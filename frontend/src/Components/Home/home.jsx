@@ -3,6 +3,7 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import { Link } from 'react-router-dom';
 import './home.css';
+import Content from './content'; 
 
 
 const Example = () => {
@@ -47,6 +48,7 @@ const Example = () => {
                     <div className="each-slide-effect" key={index}>
                         <div style={{ 'backgroundImage': `url(${slide.image})` }}>
                             <div className="slide-content">
+                               
                                 <h2>{slide.title}</h2>
                                 <p>{slide.description}</p>
                                 <Link to={slide.link} style={{ textDecoration: 'none' }}>
@@ -57,9 +59,11 @@ const Example = () => {
                     </div>
                 ))}
             </Slide>
-            </div>
-            
+            </div><br></br>
+        
+            <Content/>
         </div>
+        
     );
 };
 
