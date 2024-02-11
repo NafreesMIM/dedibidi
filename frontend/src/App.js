@@ -2,10 +2,10 @@ import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Navbar/Footer';
 import Home from './Components/Home/home';
-import About from './Components/pages/About'; 
-import Contact from './Components/pages/Contact'; 
-import Privacy from './Components/pages/privacy'; 
-import Login from './Components/pages/login'; 
+import About from './Components/Pages/About'; 
+import Contact from './Components/Pages/Contact'; 
+import Privacy from './Components/Pages/privacy'; 
+import Login from './Components/Pages/login'; 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
