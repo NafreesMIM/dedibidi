@@ -7,6 +7,7 @@ import About from './Components/Pages/About';
 import Contact from './Components/Pages/Contact'; 
 import Privacy from './Components/Pages/privacy'; 
 import Login from './Components/Pages/login'; 
+import Register from './Components/Pages/Register'; 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
           <Route path='/contact' element={<Contact />} /> 
           <Route path='/privacy' element={<Privacy />} /> 
           <Route path='/login' element={<Login />} /> 
+          <Route path='/Register' element={<Register />} /> 
         </Routes>
-        </div>
+    </div>
         <hr />
         <Footer />
       </BrowserRouter>
