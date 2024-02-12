@@ -1,3 +1,4 @@
+// App.js
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Navbar/Footer';
@@ -13,7 +14,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar className="navbar" />
+        <Navbar />
+        <hr />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} /> 

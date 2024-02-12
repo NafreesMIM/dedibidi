@@ -17,7 +17,7 @@
   }
   
   .login form label {
-    display: block;
+    display: flex;
     margin-bottom: 5px;
   }
   

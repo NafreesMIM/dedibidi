@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
@@ -137,6 +138,7 @@ const Register = () => {
           />
         </div>
         <button type="submit">Register</button>
+        <Link to={'/login'}>Already I have an account.</Link>
       </form>
     </div>
   );
