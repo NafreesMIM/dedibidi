@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './login.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   // State variables to store username and password
@@ -40,7 +40,7 @@ const Login = () => {
           />
         </div>
         <button type="submit">Login</button>
-        <a>Register</a>
+        <Link to={'/Register'}>Register</Link>
       </form>
     </div>
   );
