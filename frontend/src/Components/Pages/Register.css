@@ -1,32 +1,32 @@
-.register {
-    width: 300px;
+.register{
+    width: 500px;
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
-  }
-  
-  .register h2 {
-    margin-bottom: 20px;
-  }
-  
-  .register form div {
+    margin: auto;
+}
+
+.register form div {
+    display: flex; 
+    align-items: center; 
     margin-bottom: 10px;
   }
   
   .register form label {
-    display: flex;
-    margin-bottom: 5px;
+    text-align: left;
+    flex: 1; 
+    margin-right: 10px;
   }
   
   .register form input {
-    width: 100%;
+    flex: 2;
+    width: 1px; 
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
   }
-  
   .register form button {
     width: 100%;
     padding: 10px;
@@ -36,11 +36,6 @@
     color: #fff;
     cursor: pointer;
   }
-  
-  .register form button:hover {
-    background-color: #0056b3;
-  }
-  
   .register form a {
     display: block;
     text-align: center;
@@ -48,9 +43,9 @@
     text-decoration: none;
     color: #007bff;
   }
-
+  
   .register form a:hover {
     text-decoration: underline;
     cursor: pointer;
+    
   }
-  
