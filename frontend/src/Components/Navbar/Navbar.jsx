@@ -36,9 +36,7 @@ const Navbar = () => {
         <li onClick={() => { setMenu("privacy") }}>
           <Link style={{ textDecoration: 'none' }} to='/privacy'>PRIVACY POLICY</Link> {menu === "privacy" ? <hr /> : <></>}
         </li>
-        <li onClick={() => { setMenu("signup") }}>
-          <Link style={{ textDecoration: 'none' }} to='/signup'>SignUp</Link> {menu === "signup" ? <hr /> : <></>}
-        </li>
+        
       </ul>
       <div className="nav-login-card">
       
