@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
-  // State variables to store form data
   const [formData, setFormData] = useState({
     name: '',
     fullName: '',
@@ -16,16 +15,13 @@ const Register = () => {
     confirmPassword: ''
   });
 
-  // Function to handle form submission
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logic to handle registration (e.g., send registration request to backend)
     console.log('Registration form submitted');
     console.log('Form Data:', formData);
-    // Here you can make API calls or perform other actions related to registration
   };
 
-  // Function to handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({

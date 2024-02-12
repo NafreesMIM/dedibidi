@@ -16,6 +16,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <hr />
+        <div style={{ paddingTop: '150px' }}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} /> 
@@ -24,7 +25,7 @@ function App() {
           <Route path='/login' element={<Login />} /> 
           <Route path='/Register' element={<Register />} /> 
         </Routes>
-    
+        </div>
         <hr />
         <Footer />
       </BrowserRouter>
