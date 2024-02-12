@@ -1,0 +1,26 @@
+.privacy {
+    max-width: 800px; /* Adjust the width as needed */
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .privacy h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .privacy p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .privacy ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .privacy h4 {
+    font-size: 18px; /* Adjust the font size as needed */
+    margin-bottom: 5px;
+  }
+  
