@@ -1,11 +1,19 @@
-import React from 'react'
+import "./Contact.css"
 
-const Contact = () => {
-  return (
-    <div>
-      <p>Contact Contant Here.</p>
-    </div>
-  )
+function Contactform(){
+return(
+<div className="from-container">
+    <h1>Send a message to us!</h1>
+    <form >
+
+        <input placeholder="Name"/>
+        <input placeholder="Email"/>
+        <input placeholder="Subject"/>
+        <textarea placeholder="Message" row="4"></textarea>
+        <button>Send Message</button>
+    </form>
+</div>
+
+);
 }
-
-export default Contact
+export default Contactform;
