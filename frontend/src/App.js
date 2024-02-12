@@ -6,8 +6,7 @@ import Home from './Components/Home/home';
 import About from './Components/Pages/About'; 
 import Contact from './Components/Pages/Contact'; 
 import Privacy from './Components/Pages/privacy'; 
-import Login from './Components/Pages/login'; 
-import Register from './Components/Pages/Register'; 
+import Login from './Components/pages/login'; 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
