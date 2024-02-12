@@ -44,7 +44,7 @@ const Navbar = () => {
       </ul>
       <div className="nav-login-card">
         <Link to='/login' style={{ textDecoration: 'none' }}>
-          <button>Login</button>
+          <button onClick={() => handleMenuItemClick("privacy")}>Login</button>
         </Link>
       </div>
     </div>
