@@ -1,9 +1,14 @@
-.navbar{
-    display:  flex;
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
     justify-content: space-around;
     padding: auto;
     box-shadow: 0 1px 3px -2px black;
     background: blueviolet;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
 }
 
 .nav-logo{
