@@ -24,7 +24,7 @@ margin: auto;
 }
 
 .from-container textarea{
-   
+    height: 3rem;
     padding: 0 1rem;
     margin-bottom: 2rem;
     border-radius: .3rem;
