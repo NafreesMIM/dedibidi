@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Register.css';
-
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -16,9 +20,21 @@ const Register = () => {
     confirmPassword: ''
   });
 
-  
+  const [errorMessage, setErrorMessage] = useState('');
+  const [openDialog, setOpenDialog] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { password, confirmPassword } = formData;
+
+    // Check if password and confirm password match
+    if (password !== confirmPassword) {
+      setErrorMessage('Password and confirm password do not match.');
+      setOpenDialog(true);
+      return;
+    }
+
+    // Continue with form submission if passwords match
     console.log('Registration form submitted');
     console.log('Form Data:', formData);
   };
@@ -31,10 +47,15 @@ const Register = () => {
     }));
   };
 
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
   return (
     <div className="register">
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
+      
         <div>
           <label htmlFor="name">Name:</label>
           <input
@@ -137,6 +158,16 @@ const Register = () => {
         <button type="submit">Register</button>
         <Link to={'/login'}>Already I have an account.</Link>
       </form>
+
+      <Dialog open={openDialog} onClose={handleCloseDialog}>
+        <DialogTitle>Error</DialogTitle>
+        <DialogContent>
+          <DialogContentText>{errorMessage}</DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <button onClick={handleCloseDialog}>Close</button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 };
