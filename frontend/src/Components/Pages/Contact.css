@@ -31,8 +31,13 @@ margin: auto;
     border: 1px solid #2a2a2a;
 }
 .from-container button{
-    display: inline;
-
+ 
+    height: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10rem;
+    width: 10rem;
+  
 }
 
 @media screen and (max-width:850px){
