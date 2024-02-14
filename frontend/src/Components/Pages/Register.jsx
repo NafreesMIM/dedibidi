@@ -1,4 +1,3 @@
-// Register.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Register.css';
@@ -37,10 +36,8 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Destructure form data
     const { password, confirmPassword, ...data } = formData;
 
-    // Check if password and confirm password match
     if (password !== confirmPassword) {
       setErrorMessage('Password and confirm password do not match.');
       setOpenDialog(true);
@@ -48,8 +45,7 @@ const Register = () => {
     }
 
     try {
-      // Send registration data to the server
-      const response = await fetch('/api/register', {
+      const response = await fetch('http://localhost:5000/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -199,7 +195,6 @@ const Register = () => {
         </DialogActions>
       </Dialog>
 
-      {/* Display a message when registration is complete */}
       <Dialog open={registrationComplete} onClose={() => setRegistrationComplete(false)}>
         <DialogTitle>Registration Complete</DialogTitle>
         <DialogContent>
