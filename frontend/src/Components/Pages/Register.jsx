@@ -1,3 +1,4 @@
+// Register.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Register.css';
@@ -22,10 +23,22 @@ const Register = () => {
 
   const [errorMessage, setErrorMessage] = useState('');
   const [openDialog, setOpenDialog] = useState(false);
+  const [registrationComplete, setRegistrationComplete] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const { password, confirmPassword } = formData;
+
+    // Destructure form data
+    const { password, confirmPassword, ...data } = formData;
 
     // Check if password and confirm password match
     if (password !== confirmPassword) {
@@ -34,28 +47,44 @@ const Register = () => {
       return;
     }
 
-    // Continue with form submission if passwords match
-    console.log('Registration form submitted');
-    console.log('Form Data:', formData);
-  };
+    try {
+      // Send registration data to the server
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleCloseDialog = () => {
-    setOpenDialog(false);
+      if (response.ok) {
+        setRegistrationComplete(true);
+        setFormData({
+          name: '',
+          fullName: '',
+          address: '',
+          mobileNumber: '',
+          nicNumber: '',
+          dateOfBirth: '',
+          email: '',
+          password: '',
+          confirmPassword: ''
+        });
+      } else {
+        setErrorMessage('Registration failed. Please try again later.');
+        setOpenDialog(true);
+      }
+    } catch (error) {
+      console.error('Error during registration:', error);
+      setErrorMessage('An error occurred. Please try again later.');
+      setOpenDialog(true);
+    }
   };
 
   return (
     <div className="register">
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
-      
         <div>
           <label htmlFor="name">Name:</label>
           <input
@@ -155,8 +184,9 @@ const Register = () => {
             required
           />
         </div>
+
         <button type="submit">Register</button>
-        <Link to={'/login'}>Already I have an account.</Link>
+        <Link to={'/login'}>Already have an account?</Link>
       </form>
 
       <Dialog open={openDialog} onClose={handleCloseDialog}>
@@ -166,6 +196,17 @@ const Register = () => {
         </DialogContent>
         <DialogActions>
           <button onClick={handleCloseDialog}>Close</button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Display a message when registration is complete */}
+      <Dialog open={registrationComplete} onClose={() => setRegistrationComplete(false)}>
+        <DialogTitle>Registration Complete</DialogTitle>
+        <DialogContent>
+          <DialogContentText>Your registration was successful.</DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <button onClick={() => setRegistrationComplete(false)}>Close</button>
         </DialogActions>
       </Dialog>
     </div>
