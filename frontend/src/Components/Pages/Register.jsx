@@ -163,7 +163,7 @@ const Register = () => {
           <input
             type="password"
             id="password"
-            name="password"
+            name="password" 
             value={formData.password}
             onChange={handleChange}
             required

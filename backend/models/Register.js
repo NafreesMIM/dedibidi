@@ -1,6 +1,5 @@
-
-
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 // Define schema for "register" collection
 const registerSchema = new mongoose.Schema({
