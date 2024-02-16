@@ -1,5 +1,6 @@
 .destination{
     margin: 4rem 6rem;
+     margin-top: 20px;
 
 }
 
@@ -60,6 +61,20 @@ right: 0;
 
 
 }
+
+.destination p,
+.destination h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.destination p.show,
+.destination h2.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media screen and (max-width: 850px){
 
     .destination{
