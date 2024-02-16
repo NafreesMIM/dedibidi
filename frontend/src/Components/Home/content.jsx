@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react"
 
 import mountain from "../Assets/Arrow.png";
 import mountain2 from "../Assets/book1.png";
@@ -7,7 +7,36 @@ import mountain4 from "../Assets/7.png";
 
 import "../Home/content.css";
 
-const content = () => {
+const Content = () => {
+
+    useEffect(() => {
+        const elements = document.querySelectorAll('.destination p, .destination h2');
+    
+        const isInViewport = el => {
+          const rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        };
+    
+        const callbackFunc = () => {
+          elements.forEach(el => {
+            if (isInViewport(el)) {
+              el.classList.add('show');
+            }
+          });
+        };
+    
+        window.addEventListener('scroll', callbackFunc);
+        return () => {
+          window.removeEventListener('scroll', callbackFunc);
+        };
+      }, []);
+
+
     
         return (
             <div className="destination">
@@ -72,4 +101,4 @@ const content = () => {
     }
 
 
-export default content;
+export default Content;
