@@ -1,57 +1,78 @@
-from-container{
-
-    margin: 4rem 6rem;
+.form-container {
+    margin: 4rem auto;
     color: #2a2a2a;
-}
-
-
-.from-container form{
-
-padding-top: 3rem;
-display: flex;
-flex-direction: column;
-width: 50%;
-margin: auto;
-
-}
-
-.from-container input{
+    max-width: 1200px; /* Adjust as needed */
+  }
+  
+  .form-content {
+    display: flex;
+  }
+  
+  .contact-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+  }
+  
+  .form-wrapper {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  
+  .form-wrapper form {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-wrapper input,
+  .form-wrapper textarea {
     height: 3rem;
     padding: 0 1rem;
     margin-bottom: 2rem;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     border: 1px solid #2a2a2a;
-}
-
-.from-container textarea{
-    height: 3rem;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
-    border-radius: .3rem;
-    border: 1px solid #2a2a2a;
-}
-.from-container button{
- 
+  }
+  
+  .form-wrapper button {
     height: 2rem;
     padding: 0 1rem;
     margin-bottom: 2rem;
     border-radius: 10rem;
     width: 10rem;
+  }
+
+  .contact-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+    width: 500px; 
+    height: auto;
+  }
   
-}
-
-@media screen and (max-width:850px){
-    .from-container{
-        margin: 4rem 2rem;
+  @media screen and (max-width: 850px) {
+    .form-container {
+      margin: 4rem 2rem;
     }
-
-    .from-container form{
-        padding-top: 2rem;
-      
-     
-        flex-direction: column;
-        width: 90%;
-    
+  
+    .form-content {
+      flex-direction: column;
+      align-items: center;
     }
-    
-}
+  
+    .form-wrapper {
+      padding: 2rem;
+      width: 90%;
+    }
+  
+    .contact-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.3rem;
+        width: 200px; /* Adjust the width as needed */
+        height: auto; /* Maintain aspect ratio */
+      }
+  }
+  
