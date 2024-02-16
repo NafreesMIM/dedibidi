@@ -8,7 +8,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 const Register = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: '',
     fullName: '',
     address: '',
@@ -18,8 +18,9 @@ const Register = () => {
     email: '',
     password: '',
     confirmPassword: ''
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [errorMessage, setErrorMessage] = useState('');
   const [openDialog, setOpenDialog] = useState(false);
   const [registrationComplete, setRegistrationComplete] = useState(false);
@@ -35,10 +36,11 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
+    const { confirmPassword, ...data } = formData;
 
-    const { password, confirmPassword, ...data } = formData;
-
-    if (password !== confirmPassword) {
+    // Check if password and confirmPassword match
+    if (formData.password !== confirmPassword) {
       setErrorMessage('Password and confirm password do not match.');
       setOpenDialog(true);
       return;
@@ -53,26 +55,20 @@ const Register = () => {
         body: JSON.stringify(data),
       });
 
+      const responseData = await response.json();
+
       if (response.ok) {
+        // Registration successful
         setRegistrationComplete(true);
-        setFormData({
-          name: '',
-          fullName: '',
-          address: '',
-          mobileNumber: '',
-          nicNumber: '',
-          dateOfBirth: '',
-          email: '',
-          password: '',
-          confirmPassword: ''
-        });
+        setFormData({ ...initialFormData }); // Clear form fields
       } else {
-        setErrorMessage('Registration failed. Please try again later.');
+        // Registration failed
+        setErrorMessage(responseData.error || 'An error occurred during registration.');
         setOpenDialog(true);
       }
     } catch (error) {
       console.error('Error during registration:', error);
-      setErrorMessage('An error occurred. Please try again later.');
+      setErrorMessage('An error occurred while connecting to the server. Please try again later.');
       setOpenDialog(true);
     }
   };
@@ -202,7 +198,7 @@ const Register = () => {
         </DialogContent>
         <DialogActions>
           <button onClick={() => setRegistrationComplete(false)}>Close</button>
-        </DialogActions>
+        </DialogActions> 
       </Dialog>
     </div>
   );
