@@ -3,7 +3,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const Registration = require('./models/Register'); // Import the Registration model
+const Registration = require('./models/Register'); // Assuming this is the correct file path
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -29,7 +29,14 @@ app.post('/api/register', async (req, res) => {
   }
 });
 
+// Default error handler middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
