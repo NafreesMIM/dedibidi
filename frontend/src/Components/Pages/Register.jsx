@@ -24,6 +24,7 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [openDialog, setOpenDialog] = useState(false);
   const [registrationComplete, setRegistrationComplete] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,7 +64,7 @@ const Register = () => {
         setFormData({ ...initialFormData }); // Clear form fields
       } else {
         // Registration failed
-        setErrorMessage('Mobile number, NIC number, or email already exists.');
+        setErrorMessage('Name, Mobile number, NIC number, or email already exists Please Use another one.');
         setOpenDialog(true);
       }
     } catch (error) {
@@ -72,13 +73,12 @@ const Register = () => {
       setOpenDialog(true);
     }
   };
-  
 
   return (
     <div className="register">
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+      <div>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -160,7 +160,7 @@ const Register = () => {
         <div>
           <label htmlFor="password">Password:</label>
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             id="password"
             name="password"
             value={formData.password}
@@ -171,7 +171,7 @@ const Register = () => {
         <div>
           <label htmlFor="confirmPassword">Confirm Password:</label>
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             id="confirmPassword"
             name="confirmPassword"
             value={formData.confirmPassword}
@@ -179,17 +179,26 @@ const Register = () => {
             required
           />
         </div>
-
+        <div>
+          <label htmlFor="showPassword">Show Password</label>
+          <input
+            type="checkbox"
+            id="showPassword"
+            checked={showPassword}
+            onChange={() => setShowPassword(!showPassword)}
+          />
+        </div>
+        {/* Buttons */}
         <button type="submit">Register</button>
         <Link to={'/login'}>Already have an account?</Link>
       </form>
 
+      {/* Dialogs */}
       <Dialog open={openDialog} onClose={handleCloseDialog}>
         <DialogTitle>Alert</DialogTitle>
         <DialogContent>
           <DialogContentText>{errorMessage}</DialogContentText>
         </DialogContent>
-
         <DialogActions>
           <button onClick={handleCloseDialog}>Close</button>
         </DialogActions>
