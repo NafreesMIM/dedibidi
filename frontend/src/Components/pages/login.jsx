@@ -1,35 +1,37 @@
 import React, { useState } from 'react';
 import './login.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Perform login logic here (e.g., make API call)
-      // Replace the following with your actual login logic
-      const response = await fetch('http://localhost:5000/api/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
+      const response = await axios.post('http://localhost:5000/api/login', {
+        name: username,
+        password: password
       });
 
-      if (response.ok) {
-        setMessage('Login successful');
+      if (response.status === 200 && response.data.message === 'Login successful') {
+        setShowPopup(true);
+        setMessage('');
       } else {
-        setMessage('Invalid username or password');
+        setMessage('');
       }
     } catch (error) {
       console.error('Error during login:', error);
-      setMessage('An error occurred while logging in. Please try again later.');
+      setMessage('Invalid username or password');
     }
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
 
   return (
@@ -58,6 +60,14 @@ const Login = () => {
         <Link to={'/register'}>Register</Link>
         {message && <p>{message}</p>}
       </form>
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <span className="close" onClick={closePopup}>&times;</span>
+            <p>{`welcome ${username} !`}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
