@@ -11,24 +11,13 @@ const loginRoute = require('./Routes/login');
 // Create Express app
 const app = express();
 
-// Middleware
-app.use(bodyParser.json());
-app.use(cors());
+app.use(express.json());
+app.use(cors()); // Allow all origins for demonstration purposes. You should configure it for specific origins.
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/dedibidi', {
-  useNewUrlParser: true, // This option is no longer needed and can be omitted
-  useUnifiedTopology: true // This option is no longer needed and can be omitted
-});
+mongoose.connect('mongodb://localhost:27017/dedibidi', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
 
-// Check MongoDB connection
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', function() {
-  console.log('Connected to MongoDB');
-});
-
-// Routes
 app.use('/api', registerRoute);
 app.use('/api', loginRoute);
 // Start the server
