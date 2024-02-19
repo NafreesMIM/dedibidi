@@ -7,10 +7,10 @@ router.post('/register', async (req, res) => {
   const { name, fullName, address, mobileNumber, nicNumber, dateOfBirth, email, password } = req.body;
 
   try {
+
     // Check if mobile number, NIC number, or email already exists
     const existingUser = await User.findOne({
       $or: [
-        { name },
         { mobileNumber },
         { nicNumber },
         { email }
@@ -18,7 +18,7 @@ router.post('/register', async (req, res) => {
     });
 
     if (existingUser) {
-      return res.status(400).json({ message: 'Name, Mobile number, NIC number, or email already exists Please Use another one.' });
+      return res.status(400).json({ message: 'Mobile number, NIC number, or email already exists' });
     }
 
     // Create new user
