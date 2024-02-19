@@ -1,25 +1,22 @@
-const express = require('express');
-const router = express.Router();
-const User = require('../models/User');
-
-// Route to handle user registration
 router.post('/register', async (req, res) => {
-  const { name, fullName, address, mobileNumber, nicNumber, dateOfBirth, email, password } = req.body;
-
   try {
+    const { name, fullName, address, mobileNumber, nicNumber, dateOfBirth, email, password } = req.body;
+
+    console.log('Received registration request:', req.body);
 
     // Check if mobile number, NIC number, or email already exists
     const existingUser = await User.findOne({
       $or: [
         { mobileNumber },
         { nicNumber },
-        { email }
+        { email },
+        { name } // Add the 'name' field to the uniqueness check if necessary
       ]
     });
 
     if (existingUser) {
-
-      return res.status(400).json({ message: 'Mobile number, NIC number, or email already exists' });
+      console.log('Existing User:', existingUser);
+      return res.status(400).json({ message: 'Name, Mobile number, NIC number, or email already exists. Please use another one.' });
     }
 
     // Create new user
@@ -42,5 +39,3 @@ router.post('/register', async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
-
-module.exports = router;
