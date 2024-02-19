@@ -3,18 +3,33 @@ import './login.css';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-  // State variables to store username and password
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
 
-  // Function to handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logic to handle login (e.g., send login request to backend)
-    console.log('Login button clicked');
-    console.log('Username:', username);
-    console.log('Password:', password);
-    // Here you can make API calls or perform other actions related to logging in
+
+    try {
+      // Perform login logic here (e.g., make API call)
+      // Replace the following with your actual login logic
+      const response = await fetch('http://localhost:5000/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.ok) {
+        setMessage('Login successful');
+      } else {
+        setMessage('Invalid username or password');
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      setMessage('An error occurred while logging in. Please try again later.');
+    }
   };
 
   return (
@@ -40,7 +55,8 @@ const Login = () => {
           />
         </div>
         <button type="submit">Login</button>
-        <Link to={'/Register'}>Register</Link>
+        <Link to={'/register'}>Register</Link>
+        {message && <p>{message}</p>}
       </form>
     </div>
   );
