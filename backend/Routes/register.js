@@ -1,3 +1,5 @@
+
+
 router.post('/register', async (req, res) => {
   try {
     const { name, fullName, address, mobileNumber, nicNumber, dateOfBirth, email, password } = req.body;
@@ -10,13 +12,13 @@ router.post('/register', async (req, res) => {
         { mobileNumber },
         { nicNumber },
         { email },
-        { name } // Add the 'name' field to the uniqueness check if necessary
+        { name }
       ]
     });
 
     if (existingUser) {
       console.log('Existing User:', existingUser);
-      return res.status(400).json({ message: 'Name, Mobile number, NIC number, or email already exists. Please use another one.' });
+      return res.status(400).json({ message: 'Name, Mobile number, NIC number, or email already exists. Please use another one.', existingUser });
     }
 
     // Create new user
