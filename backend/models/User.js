@@ -11,4 +11,10 @@ const userSchema = new mongoose.Schema({
   password: String,
 });
 
+// Static method to check if any of the provided fields already exist
+userSchema.statics.exists = async function (fields) {
+  const user = await this.findOne({ $or: fields }).exec();
+  return !!user;
+};
+
 module.exports = mongoose.model('User', userSchema);

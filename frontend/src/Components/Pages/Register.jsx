@@ -38,14 +38,14 @@ const Register = () => {
     e.preventDefault();
   
     const { confirmPassword, ...data } = formData;
-
+  
     // Check if password and confirmPassword match
     if (formData.password !== confirmPassword) {
       setErrorMessage('Password and confirm password do not match.');
       setOpenDialog(true);
       return;
     }
-
+  
     try {
       const response = await fetch('http://localhost:5000/api/register', {
         method: 'POST',
@@ -54,16 +54,16 @@ const Register = () => {
         },
         body: JSON.stringify(data),
       });
-
+  
       const responseData = await response.json();
-
+  
       if (response.ok) {
         // Registration successful
         setRegistrationComplete(true);
         setFormData({ ...initialFormData }); // Clear form fields
       } else {
         // Registration failed
-        setErrorMessage(responseData.error || 'An error occurred during registration.');
+        setErrorMessage('Mobile number, NIC number, or email already exists.');
         setOpenDialog(true);
       }
     } catch (error) {
@@ -72,6 +72,7 @@ const Register = () => {
       setOpenDialog(true);
     }
   };
+  
 
   return (
     <div className="register">
@@ -152,6 +153,8 @@ const Register = () => {
             value={formData.email}
             onChange={handleChange}
             required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            title="Please enter a valid email address"
           />
         </div>
         <div>
@@ -182,10 +185,11 @@ const Register = () => {
       </form>
 
       <Dialog open={openDialog} onClose={handleCloseDialog}>
-        <DialogTitle>Error</DialogTitle>
+        <DialogTitle>Alert</DialogTitle>
         <DialogContent>
           <DialogContentText>{errorMessage}</DialogContentText>
         </DialogContent>
+
         <DialogActions>
           <button onClick={handleCloseDialog}>Close</button>
         </DialogActions>
