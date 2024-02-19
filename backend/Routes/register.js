@@ -18,6 +18,7 @@ router.post('/register', async (req, res) => {
     });
 
     if (existingUser) {
+
       return res.status(400).json({ message: 'Mobile number, NIC number, or email already exists' });
     }
 
