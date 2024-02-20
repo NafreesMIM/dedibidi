@@ -1,4 +1,6 @@
-
+const express = require('express');
+const router = express.Router();
+const User = require('../models/User'); 
 
 router.post('/register', async (req, res) => {
   try {
@@ -6,7 +8,7 @@ router.post('/register', async (req, res) => {
 
     console.log('Received registration request:', req.body);
 
-    // Check if mobile number, NIC number, or email already exists
+    // Check if mobile number, NIC number, email, or name already exists
     const existingUser = await User.findOne({
       $or: [
         { mobileNumber },
@@ -41,3 +43,5 @@ router.post('/register', async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
+
+module.exports = router;
