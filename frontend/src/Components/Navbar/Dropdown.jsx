@@ -1,6 +1,6 @@
+// Dropdown.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
 
 const Dropdown = ({ title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +13,15 @@ const Dropdown = ({ title, items }) => {
     setIsOpen(false);
   };
 
+  const handleItemClick = (item) => {
+    if (item.openInNewWindow) {
+      window.open(item.link, '_blank');
+    } else {
+      console.log(`Navigating to: ${item.link}`);
+    }
+    setIsOpen(false);
+  };
+
   return (
     <div className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="dropdown-toggle">
@@ -21,8 +30,10 @@ const Dropdown = ({ title, items }) => {
       {isOpen && (
         <ul className="dropdown-menu">
           {items.map((item, index) => (
-            <li key={index}>
-              <Link to={item.link}>{item.text}</Link>
+            <li key={index} onClick={() => handleItemClick(item)}>
+              <Link to={item.link} target={item.openInNewWindow ? '_blank' : '_self'}>
+                {item.text}
+              </Link>
             </li>
           ))}
         </ul>
