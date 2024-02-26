@@ -1,3 +1,4 @@
+// Navbar.js
 import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../Assets/Logo.png';
@@ -12,6 +13,14 @@ const Navbar = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const dropdownItems = [
+    { text: 'Job posting and seeking', link: '/job-posting' },
+    { text: 'Online booking', link: '/online-booking' },
+    { text: 'Online consultation', link: '/Consultation/service3', openInNewWindow: true },
+    { text: 'Selling and buying', link: '/service4' },
+    { text: 'E stores', link: '/service5' }
+  ];
+
   return (
     <div className='navbar'>
       <div className="nav-logo" onClick={() => handleMenuItemClick("home")}>
@@ -23,13 +32,7 @@ const Navbar = () => {
           <Link style={{ textDecoration: 'none' }} to='/'>HOME{menu === "home" && <hr />}</Link>
         </li>
         <li onClick={() => handleMenuItemClick("services")}>
-          <Dropdown title="SERVICES" items={[
-            { text: 'Job posting and seeking', link: '/service1' },
-            { text: 'Online booking', link: '/service2' },
-            { text: 'Online consultation', link: '/service3' },
-            { text: 'Selling and buying', link: '/service4' },
-            { text: 'E stores', link: '/service5' }
-          ]} />
+          <Dropdown title="SERVICES" items={dropdownItems} />
           {menu === "services" && <hr />}
         </li>
         <li onClick={() => handleMenuItemClick("about")}>
