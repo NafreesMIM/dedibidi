@@ -9,25 +9,36 @@ import Privacy from './Components/Pages/privacy';
 import Login from './Components/Pages/login'; 
 import Register from './Components/Pages/Register'; 
 import Service3 from './Components/Consultation/service3';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
-        <hr />
-        <div style={{ paddingTop: '150px' }}>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} /> 
-          <Route path='/contact' element={<Contact />} /> 
-          <Route path='/privacy' element={<Privacy />} /> 
-          <Route path='/login' element={<Login />} /> 
-          <Route path='/Register' element={<Register />} /> 
-          <Route path='/Consultation/service3' element={<Service3 />} />
+          <Route path='/' element={<Navbar />}>
+            {/* Only render Navbar for routes other than /Consultation/service3 */}
+            <Route index element={<Navbar />} />
+            <Route path='/about' element={<About />} /> 
+            <Route path='/contact' element={<Contact />} /> 
+            <Route path='/privacy' element={<Privacy />} /> 
+            <Route path='/login' element={<Login />} /> 
+            <Route path='/register' element={<Register />} />
+          </Route>
         </Routes>
-    </div>
+
+        <div >
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} /> 
+            <Route path='/contact' element={<Contact />} /> 
+            <Route path='/privacy' element={<Privacy />} /> 
+            <Route path='/login' element={<Login />} /> 
+            <Route path='/register' element={<Register />} />
+            <Route path='/Consultation/service3' element={<Service3 />} />
+          </Routes>
+        </div>
+
         <hr />
         <Footer />
       </BrowserRouter>
