@@ -1,15 +1,19 @@
-body, html {
-    margin: 0;
-    padding: 0;
-  }
-  
+/* ConsultationNavbar.css */
+
 .consultation-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333; /* Adjust the background color as needed */
+    background-color: #471d02;
     padding: 10px 20px;
     color: #fff; /* Text color */
+  }
+  
+  .support-navbar {
+    display: flex;
+    justify-content: center;
+  
+  
   }
   
   .navbar-left {
@@ -37,12 +41,10 @@ body, html {
     display: flex;
   }
   
-  .consultation-navbar a {
+  .consultation-navbar a, .support-navbar a {
     color: #fff; /* Link text color */
     text-decoration: none;
     margin-right: 15px;
   }
-  
-  /* Add additional styles as needed */
   
   
