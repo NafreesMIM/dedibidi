@@ -1,15 +1,23 @@
-// Service3.js
 import React from 'react';
 import ConsultationNavbar from './ConsultationNavbar'; // Adjust the import path based on your project structure
+import '../Consultation/service3.css'; // Import your CSS file for styling
 
 const Service3 = () => {
-    
   return (
-    <div>
+    <div className="service3-container">
       <ConsultationNavbar />
-      {/* Your Online Consultation page content */}
-      <h1>Online Consultation Page</h1>
-      {/* Add other content as needed */}
+
+      {/* Main Content */}
+      <div className="main-content">
+        {/* Your Online Consultation page content */}
+        <h2>Welcome to the Dedibidi <br></br> 
+         Consultation Service!!!</h2>
+        {/* Add other content as needed */}
+       
+        <button>Explore More</button>
+      </div>
+
+    
     </div>
   );
 };
