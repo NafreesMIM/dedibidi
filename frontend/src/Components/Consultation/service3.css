@@ -1,0 +1,51 @@
+
+
+.service3-container {
+    background: url('../Assets/headway.jpg') center/cover no-repeat; 
+    min-height: 100vh; 
+    color: #fff; 
+  
+    
+  }
+  
+ /* service3.css */
+
+.service3-container {
+   
+    justify-content: space-between;
+    align-items: flex-start;
+
+    
+  
+  }
+  
+  .main-content {
+    
+    max-width: 700px; 
+    margin-top:100px;
+    margin-left: 700px;
+
+    
+  }
+  
+  .main-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+ 
+  
+  .main-content button {
+    background-color: #4CAF50; /* Green color, you can change it */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .main-content button:hover {
+    background-color: #45a049; /* Darker green on hover, you can change it */
+  }
+  
