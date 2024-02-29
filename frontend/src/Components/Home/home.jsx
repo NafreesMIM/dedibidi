@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import './home.css';
 import Content from './content'; 
 
-
 const Example = () => {
     const slides = [
         {
@@ -24,7 +23,8 @@ const Example = () => {
             title: 'Online Consultation Services',
             description: 'Get expert advice in various fields like IT, Law, etc.',
             image: '/consultation.jpeg',
-            link: '/consultation', 
+            link: '/Consultation/service3', 
+            openInNewWindow: true
         },
         {
             title: 'Selling and Buying Items',
@@ -42,30 +42,33 @@ const Example = () => {
 
     return (
         <div>
-        <div className="slide-container">
-            <Slide>
-                {slides.map((slide, index) => (
-                    <div className="each-slide-effect" key={index}>
-                        <div style={{ 'backgroundImage': `url(${slide.image})` }}>
-                            <div className="slide-content">
-                               
-                                <h2>{slide.title}</h2>
-                                <p>{slide.description}</p>
-                                <Link to={slide.link} style={{ textDecoration: 'none' }}>
-                                    <button>Explore</button>
-                                </Link>
+            <div className="slide-container">
+                <Slide>
+                    {slides.map((slide, index) => (
+                        <div className="each-slide-effect" key={index}>
+                            <div style={{ 'backgroundImage': `url(${slide.image})` }}>
+                                <div className="slide-content">
+                                    <h2>{slide.title}</h2>
+                                    <p>{slide.description}</p>
+                                    {slide.openInNewWindow ? (
+                                        <a href={slide.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                                            <button>Explore</button>
+                                        </a>
+                                    ) : (
+                                        <Link to={slide.link} style={{ textDecoration: 'none' }}>
+                                            <button>Explore</button>
+                                        </Link>
+                                    )}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-            </Slide>
+                    ))}
+                </Slide>
             </div><br></br>
         
             <Content/>
         </div>
-        
     );
 };
 
 export default Example;
-
