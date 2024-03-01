@@ -14,11 +14,11 @@ const Navbar = () => {
   };
 
   const dropdownItems = [
-    { text: 'Job posting and seeking', link: '/job-posting' },
-    { text: 'Online booking', link: '/online-booking' },
+    { text: 'Job posting and seeking', link: '/job-posting', openInNewWindow: true },
+    { text: 'Online booking', link: '/online-booking', openInNewWindow: true },
     { text: 'Online consultation', link: '/Consultation/service3', openInNewWindow: true },
-    { text: 'Selling and buying', link: '/service4' },
-    { text: 'E stores', link: '/service5' }
+    { text: 'Selling and buying', link: '/service4', openInNewWindow: true },
+    { text: 'E stores', link: '/service5', openInNewWindow: true }
   ];
 
   return (
@@ -47,7 +47,7 @@ const Navbar = () => {
       </ul>
       <div className="nav-login-card">
         <Link to='/login' style={{ textDecoration: 'none' }}>
-          <button onClick={() => handleMenuItemClick("privacy")}>Login</button>
+          <button onClick={() => handleMenuItemClick("login")}>Login</button>
         </Link>
       </div>
     </div>
