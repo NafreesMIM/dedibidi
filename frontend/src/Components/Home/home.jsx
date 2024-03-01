@@ -24,7 +24,6 @@ const Example = () => {
             description: 'Get expert advice in various fields like IT, Law, etc.',
             image: '/consultation.jpeg',
             link: '/Consultation/service3', 
-            openInNewWindow: true
         },
         {
             title: 'Selling and Buying Items',
