@@ -15,7 +15,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
+      <div className='content-container'>
+         <Routes>
           <Route path='/' element={<Navbar />}>
             {/* Only render Navbar for routes other than /Consultation/service3 */}
             <Route index element={<Navbar />} />
@@ -26,8 +27,9 @@ function App() {
             <Route path='/register' element={<Register />} />
           </Route>
         </Routes>
+      </div>
+       
 
-        <div >
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} /> 
@@ -37,7 +39,6 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/Consultation/service3' element={<Service3 />} />
           </Routes>
-        </div>
 
         <hr />
         <Footer />

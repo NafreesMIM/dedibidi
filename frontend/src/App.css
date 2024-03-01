@@ -4,6 +4,9 @@ body{
 .App {
   text-align: center;
 }
+.content-container {
+  margin-top: 150px;
+}
 
 .App-logo {
   height: 40vmin;
@@ -11,7 +14,7 @@ body{
 }
 .navbar {
   padding: 0px;
-  margin-bottom: 150;
+  margin-bottom: 15;
 }
 hr{
   margin-top: 3;

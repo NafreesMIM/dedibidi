@@ -1,40 +1,42 @@
+/* Navbar.css */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    padding: auto;
-    box-shadow: 0 1px 3px -2px black;
-    background: blueviolet;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px; /* Adjust padding as needed */
+    background-color: blueviolet;
     z-index: 1000; /* Ensures the navbar stays on top of other content */
-}
-
-.nav-logo{
+  }
+  
+  .nav-logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    
-}
-.nav-logo img{
-    width: 10%;
-    height: 600;
+  }
+  
+  .nav-logo img {
+    width: 25%;
+    height: 50px; /* Adjust the height as needed */
     gap: 5px;
     border-radius: 24px;
     padding-left: 40px;
-}
-
-.nav-logo p{
-    color: 171717;
+  }
+  
+  .nav-logo p {
+    color: #171717;
     font-size: 38px;
     font-weight: 600;
-}
-
-.comEdit{
+  }
+  
+  .comEdit {
     color: rgb(69, 146, 235);
-}
-.nav-menu{
+  }
+  
+  .nav-menu {
     display: flex;
     align-items: center;
     text-align: center;
@@ -43,92 +45,80 @@
     color: black;
     font-size: 16px;
     font-weight: 500;
-    
-    
-}
-
-
-.nav-menu li{
-
+  }
+  
+  .nav-menu li {
     padding: 3px;
-}
-
-.dropdown:hover{
+  }
+  
+  .dropdown:hover,
+  .nav-menu li:hover {
     background-color: #6b18b8;
     color: #000000;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    
-}
-
-.nav-menu li:hover{
-    background-color: #6b18b8;
-    color: #000000;
-    border-radius: 5px;
-    transition: all 0.2s ease-in-out;
-    
-}
-
-.nav-menu li{
+  }
+  
+  .nav-menu li {
     display: flex;
     flex-direction: column;
     align-items: center;
-   justify-content: center;
-   gap: 5px;
-   cursor: pointer;
-}
-.nav-menu li a {
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-menu li a {
     color: black;
     font-size: 16px;
     font-weight: 500;
-}
-
-.dropdown-menu li a {
+  }
+  
+  .dropdown-menu li a {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
   }
-
-.nav-menu hr{
+  
+  .nav-menu hr {
     border: none;
     width: 90%;
     height: 3px;
     border-radius: 10px;
     background: white;
-}
-.nav-login-card{
+  }
+  
+  .nav-login-card {
     display: flex;
     align-items: center;
     padding: 50px;
     gap: 35px;
-}
-
-.nav-login-card button{
-    width: 100px;
-    height: 40px;
-    outline: none;
-    border: 1px solid black;
-    border-radius: 75px;
-    color: black;
-    font-size: 16px;
+  }
+  
+  .nav-login-card button {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
     font-weight: 600;
-    background: white;
+    border: none;
     cursor: pointer;
-}
-.nav-login-card button:active{
-    background: transparent;
-    color: black;
-}
-
-.dropdown {
+    transition: 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: rgb(0, 255, 238);
+    color: #fff;
+  }
+  
+  .dropdown {
     position: relative;
     display: inline-block;
   }
   
   .dropdown-menu {
     position: absolute;
-    top: 100%; /* Adjust as needed */
+    top: 100%;
     left: 0;
     list-style: none;
     padding: 50px;
@@ -136,8 +126,8 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1;
     background-color: white;
-   
   }
+  
   @media (max-width: 768px) {
     .navbar {
       flex-direction: column;
@@ -153,18 +143,4 @@
       margin-top: 10px;
     }
   }
-
-  .nav-login-card button{
-
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition:0.2s ease-in-out ;
-}
-button:hover{
-    background-color: rgb(0, 255, 238);
-    color: #fff;}
+  
