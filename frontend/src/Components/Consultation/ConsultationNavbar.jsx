@@ -30,6 +30,7 @@ const ConsultationNavbar = () => {
 
       {/* New Navbar for Service to Support */}
       <div className="support-navbar">
+      <Link to="#">Home</Link>
         <Link to="/consultation/services">Service</Link>
         <Link to="/consultation/home">About Us</Link>
         <Link to="/consultation/services">FAQs</Link>
