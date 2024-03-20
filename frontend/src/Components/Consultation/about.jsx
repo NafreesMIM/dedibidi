@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './AboutUs.css'; // Import the CSS file for styling
+import './about.css'; // Import the CSS file for styling
 
 const AboutUs = () => {
   return (
