@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ConsultationNavbar from './ConsultationNavbar'; // Adjust the import path based on your project structure
-import Home from './Consultation/home'; // Import the component for the Home page
+import Home from '../Consultation/home'; // Import the component for the Home page
 import AboutUs from '../Consultation/about'; // Import the component for the About Us page
 
 
