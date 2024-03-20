@@ -1,32 +1,25 @@
-// Service3.js
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ConsultationNavbar from './ConsultationNavbar'; // Adjust the import path based on your project structure
-import Home from '../Consultation/home'; // Import the component for the Home page
-import AboutUs from '../Consultation/about'; // Import the component for the About Us page
-
+import '../Consultation/service3.css'; // Import your CSS file for styling
 
 const Service3 = () => {
   return (
     <div className="service3-container">
-      <BrowserRouter>
-        <ConsultationNavbar />
+      <ConsultationNavbar />
 
-        {/* Main Content */}
-        <div className="main-content">
-          <Routes>
-            <Route path="/Consultation/home" element={<Home />} />
-            <Route path="/Consultation/about" element={<AboutUs />} />
-            {/* Add routes for other pages */}
-          </Routes>
-          <h2>Welcome to the Dedibidi Consultation Service!!!</h2>
-          {/* Add other content as needed */}
-          <button>Explore More</button>
-        </div>
-      </BrowserRouter>
+      {/* Main Content */}
+      <div className="main-content">
+        {/* Your Online Consultation page content */}
+        <h2>Welcome to the Dedibidi <br></br> 
+         Consultation Service!!!</h2>
+        {/* Add other content as needed */}
+       
+        <button>Explore More</button>
+      </div>
+
+    
     </div>
   );
 };
 
 export default Service3;
-
