@@ -2,8 +2,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ConsultationNavbar from './ConsultationNavbar'; // Adjust the import path based on your project structure
-import Home from './Home'; // Import the component for the Home page
-import AboutUs from './about'; // Import the component for the About Us page
+import Home from './Consultation/home'; // Import the component for the Home page
+import AboutUs from '../Consultation/about'; // Import the component for the About Us page
 
 
 const Service3 = () => {
@@ -15,8 +15,8 @@ const Service3 = () => {
         {/* Main Content */}
         <div className="main-content">
           <Routes>
-            <Route path="/consultation/home" element={<Home />} />
-            <Route path="/consultation/about" element={<AboutUs />} />
+            <Route path="/Consultation/home" element={<Home />} />
+            <Route path="/Consultation/about" element={<AboutUs />} />
             {/* Add routes for other pages */}
           </Routes>
           <h2>Welcome to the Dedibidi Consultation Service!!!</h2>
