@@ -31,14 +31,14 @@ const ConsultationNavbar = () => {
       {/* New Navbar for Service to Support */}
       <div className="support-navbar">
         <Link to="#">Home</Link>
-        <Link to="/consultation/services">Service</Link>
+        <Link to="/Consultation/services">Service</Link>
         <Link to="/Consultation/about">About Us</Link>
-        <Link to="/consultation/services">FAQs</Link>
-        <Link to="/consultation/services">Review</Link>
-        <Link to="/consultation/services">Contact Us</Link>
-        <Link to="/consultation/services">Calender</Link>
-        <Link to="/consultation/services">Payment</Link>
-        <Link to="/consultation/services">Support</Link>
+        <Link to="/Consultation/services">FAQs</Link>
+        <Link to="/Consultation/services">Review</Link>
+        <Link to="/Consultation/services">Contact Us</Link>
+        <Link to="/Consultation/services">Calender</Link>
+        <Link to="/Consultation/services">Payment</Link>
+        <Link to="/Consultation/services">Support</Link>
       </div>
     </div>
   );
