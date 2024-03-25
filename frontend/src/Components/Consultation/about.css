@@ -1,6 +1,15 @@
+/* about.css */
+
 .about-us-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 20px;
+    background-color: #c11717; /* Set your desired background color */
+    padding: 20px;
   }
+  
+  .about-us-container h2 {
+    color: #333; /* Set color for headings */
+  }
+  
+  .about-us-container p {
+    color: #666; /* Set color for paragraphs */
+  }
+  
