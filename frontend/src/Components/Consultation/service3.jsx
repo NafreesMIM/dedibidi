@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import ConsultationNavbar from './ConsultationNavbar'; // Adjust the import path based on your project structure
-import '../Consultation/service3.css'; // Import your CSS file for styling
+import ConsultationNavbar from './ConsultationNavbar'; 
+import '../Consultation/service3.css'; 
 import AboutUs from './Cabout'; 
 
 const Service3 = () => {
@@ -13,13 +13,13 @@ const Service3 = () => {
       {/* Main Content */}
       <div className="main-content">
       <Routes>
-            <Route path="/Consultation/about" element={<AboutUs />} /> {/* Route for AboutUs page */}
-            {/* Add routes for other pages */}
+            <Route path="/Consultation/Cabout" element={<AboutUs />} /> {/* Route for AboutUs page */}
+           
           </Routes>
-        {/* Your Online Consultation page content */}
+     
         <h2>Welcome to the Dedibidi <br></br> 
          Consultation Service!!!</h2>
-        {/* Add other content as needed */}
+       
        
         <button>Explore More</button>
       </div>
