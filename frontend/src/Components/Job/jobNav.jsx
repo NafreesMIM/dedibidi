@@ -1,19 +1,18 @@
-// ConsultationNavbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../Consultation/ConsultationNavbar.css';
+import '../job/jobNav.css';
 import logo from '../Assets/Logo.png';
 
-const ConsultationNavbar = () => {
+const jobNavbar = () => {
   return (
     <div>
       {/* Existing Navbar */}
-      <div className="consultation-navbar">
+      <div className="Job-navbar">
         <div className="navbar-left">
-          <Link to="/consultation/home">
+          <Link to="/Job/home">
             <img src={logo} alt="Company Logo" className="logo" />
           </Link>
-          <h2>Dadibidi Consultation</h2>
+          <h2>Dadibidi Jobs seeking & posting</h2>
         </div>
 
         <div className="navbar-center">
@@ -23,22 +22,23 @@ const ConsultationNavbar = () => {
 
         <div className="navbar-right">
           {/* Add login and signup links */}
-          <Link to="/consultation/login">Login</Link>
-          <Link to="/consultation/signup">Signup</Link>
+          <Link to="/Job/login">Login</Link>
+          <Link to="/Job/signup">Signup</Link>
         </div>
       </div>
 
       {/* New Navbar for Service to Support */}
       <div className="support-navbar">
-        <Link to="/consultation/services">Service</Link>
-        <Link to="/consultation/home">About Us</Link>
-        <Link to="/consultation/services">FAQs</Link>
-        <Link to="/consultation/services">Review</Link>
-        <Link to="/consultation/services">Contact Us</Link>
-        <Link to="/consultation/services">Calender</Link>
-        <Link to="/consultation/services">Payment</Link>
-        <Link to="/consultation/services">Support</Link>
+        <Link to="/Job/services">Service</Link>
+        <Link to="/Job/home">About Us</Link>
+        <Link to="/Job/services">FAQs</Link>
+        <Link to="/Job/services">Review</Link>
+        <Link to="/Job/services">Contact Us</Link>
+        <Link to="/Job/services">Calender</Link>
+        <Link to="/Job/services">Payment</Link>
+        <Link to="/Job/services">Support</Link>
       </div>
     </div>
   );
 };
+export default jobNavbar;
