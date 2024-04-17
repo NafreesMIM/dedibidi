@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const dropdownItems = [
     { text: 'Job posting and seeking', link: '/Job/service1', openInNewWindow: true },
-    { text: 'Online booking', link: '/online-booking', openInNewWindow: true },
+    { text: 'Online booking', link: '/online-booking/service2', openInNewWindow: true },
     { text: 'Online consultation', link: '/Consultation/service3', openInNewWindow: true },
     { text: 'Selling and buying', link: '/service4', openInNewWindow: true },
     { text: 'E stores', link: 'E-store/service5', openInNewWindow: true }
