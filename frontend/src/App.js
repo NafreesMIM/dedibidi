@@ -35,7 +35,7 @@ function App() {
             <Route path='/privacy' element={<PrivacyWithContentContainer />} /> 
             <Route path='/login' element={<LoginWithContentContainer />} /> 
             <Route path='/register' element={<RegisterWithContentContainer />} />
-            <Route path='/Consultation/*' element={<ConsNavbar />} /> {/* Render ConsNavbar for all consultation pages */}
+            <Route path='/Consultation/*' element={<ConsNavbar />} /> 
             <Route path='/Consultation/service3' element={<Service3 />} /> 
           </Routes>
 
