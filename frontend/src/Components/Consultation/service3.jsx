@@ -10,11 +10,11 @@ const Service3 = () => {
       
       <ConsultationNavbar />
 
-      {/* Main Content */}
+   
       <div className="main-content">
       <Routes>
             <Route path="/Consultation/Cabout" element={<AboutUs />} /> {/* Route for AboutUs page */}
-           
+            <Route path="/Consultation/Service" element={<AboutUs />} />
           </Routes>
      
         <h2>Welcome to the Dedibidi <br></br> 
