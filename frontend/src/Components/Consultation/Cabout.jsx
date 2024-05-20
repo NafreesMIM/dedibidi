@@ -10,7 +10,7 @@ const AboutUs = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Nullam ac urna vel enim ullamcorper laoreet. In hac habitasse platea dictumst.
       </p>
-      {/* Add more content as needed */}
+    
     </div>
   );
 };
