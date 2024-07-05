@@ -1,16 +1,16 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import jobNav from './jobNav'; 
+import JobNav from './JobNav'; 
 import '../Job/service1.css'; 
+
 
 
 const Service1 = () => {
   return (
-    <div className="service3-container">
+    <div className="service1-container">
       
-      <jobNav />
+      <JobNav />
 
-      {/* Main Content */}
+     {/* Main Content */}
       <div className="main-content">
      
         
