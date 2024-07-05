@@ -7,6 +7,7 @@ import Contact from './Components/Pages/Contact';
 import Privacy from './Components/Pages/privacy'; 
 import Login from './Components/Pages/login'; 
 import Register from './Components/Pages/Register'; 
+import Service1 from './Components/Job/service1'; 
 import Service3 from './Components/Consultation/service3'; 
 import ConsNavbar from './Components/Consultation/ConsultationNavbar';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
@@ -37,6 +38,7 @@ function App() {
             <Route path='/register' element={<RegisterWithContentContainer />} />
             <Route path='/Consultation/*' element={<ConsNavbar />} /> 
             <Route path='/Consultation/service3' element={<Service3 />} /> 
+            <Route path='/Job/service1' element={<Service1 />} /> 
           </Routes>
 
           <hr />
