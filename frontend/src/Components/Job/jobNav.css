@@ -1,0 +1,60 @@
+.Job-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #471d02;
+    padding: 10px 20px;
+    color: #ffffff; /* Text color */
+  }
+  
+  .support-navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 10px 20px;
+  }
+ 
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-left h1 {
+    margin-left: 50px; 
+  }
+  
+  .logo {
+    width: 40px; 
+    margin-right: 10px;
+  }
+  
+  .navbar-center {
+    flex: 1;
+    margin: 0 100px;
+  }
+  
+  .navbar-center input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ffffff; /* Adjust the border color */
+  }
+  
+  .navbar-right {
+    display: flex;
+  }
+  
+  .consultation-navbar a{
+    color: #fff; /* Link text color */
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  
+  .support-navbar a {
+    color: #000000; /* Link text color */
+    text-decoration: none;
+    margin-right: 15px;
+  }
