@@ -6,7 +6,7 @@
     align-items: center;
     background-color: #471d02;
     padding: 10px 20px;
-    color: #fff; /* Text color */
+    color: #fff; 
   }
   
   .support-navbar {
@@ -24,6 +24,7 @@
 
   .navbar-left h2 {
     margin-left: 10px; 
+    
   }
   
   .logo {
