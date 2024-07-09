@@ -1,7 +1,7 @@
-// ConsultationNavbar.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../Consultation/ConsultationNavbar.css';
+import './ConsultationNavbar.css';
 import logo from '../Assets/Logo.png';
 
 const ConsultationNavbar = () => {
@@ -31,7 +31,7 @@ const ConsultationNavbar = () => {
     
       <div className="support-navbar">
         <Link to="#">Home</Link>
-        <Link to="/Consultation/service">Service</Link>
+        <Link to="/Consultation/Service">Service</Link>
         <Link to="/Consultation/Cabout">About Us</Link>
         <Link to="/Consultation/services">FAQs</Link>
         <Link to="/Consultation/services">Review</Link>
