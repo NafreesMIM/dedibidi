@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import ConsultationNavbar from './ConsultationNavbar'; 
 import '../Consultation/service3.css'; 
 import AboutUs from './Cabout'; 
+import Service from './Service'; 
 
 const Service3 = () => {
   return (
@@ -12,9 +13,9 @@ const Service3 = () => {
 
    
       <div className="main-content">
-      <Routes>
-            <Route path="/Consultation/Cabout" element={<AboutUs />} /> {/* Route for AboutUs page */}
-            <Route path="/Consultation/Service" element={<AboutUs />} />
+         <Routes>
+            <Route path="/Consultation/Cabout" element={<AboutUs />} /> 
+            <Route path="/Consultation/Service" element={<Service />} />
           </Routes>
      
         <h2>Welcome to the Dedibidi <br></br> 
