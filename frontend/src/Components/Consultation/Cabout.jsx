@@ -4,7 +4,7 @@ import './Cabout.css';
 
 const AboutUs = () => {
   return (
-    <div className="about-us-container">
+    <div className="about-us-c">
       <h2>About Us</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
